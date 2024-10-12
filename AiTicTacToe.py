@@ -120,6 +120,14 @@ def playAgainstAi(state):
     
       state = perform_action(state, (r,c))
     
+    if score < 0:
+        message = "You lost, try again!"
+    elif score > 0:
+        message = "You won!!"
+    else:
+        message = "Draw"
+    
+    print(message)
     print("Game over, score =", score)
     print(state_string(state))
 
